@@ -32,6 +32,28 @@ const notifications = () => {
         printLength();
     });
 
+    
+    let unreadNodelist = document.querySelectorAll('.unread');
+
+    if (unreadNodelist) {
+
+        for (let element of unreadNodelist) {
+
+            element.addEventListener('click', (event) => {
+
+                let targetElement = event.currentTarget;
+
+                if (targetElement.classList.contains('unread')) {
+                    targetElement.classList.remove('unread');
+                    printLength();
+                }
+
+            })
+
+        }
+
+    }
+
 }
 
 notifications();
