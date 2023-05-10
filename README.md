@@ -32,8 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [...](...)
-- Live Site URL: [...](...)
+- Live Site URL: [https://antoru-notification-page.netlify.app/](https://antoru-notification-page.netlify.app/)
 
 ## My process
 
