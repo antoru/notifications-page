@@ -1,0 +1,259 @@
+body {
+
+    @include main_font_medium;
+    font-size: 1.6rem;
+    color: $bodyColor;
+    background-color: $bodyBackground;
+    
+}
+
+.page {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    &__container {
+        width: 100%;
+        max-width: 76rem;
+
+        margin: 0 auto;
+
+        @include big_device {
+            padding: 0 1.5rem;
+        }
+
+        .component {
+
+            background-color: #fff;
+
+            border-radius: 1.5rem;
+            box-shadow: 0px 20px 60px rgba(73, 97, 168, 0.05);
+
+            @include big_device {
+                padding: 3.3rem 3rem 0;
+            }
+
+            @include small_device {
+                padding: 2.4rem 1.6rem;
+            }
+
+            &__top {
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .title {
+
+                    @include main_font_extrabold;
+                    display: flex;
+                    align-items: center;
+
+                    &__txt {
+
+                        font-size: 2.4rem;
+                        line-height: 3rem;
+                        color: $very_dark_blue;
+                    }
+
+                    &__num {
+                        width: 3.2rem;
+                        height: 2.5rem;
+                        font-size: 1.6rem;
+                        background-color: $blue;
+                        color: #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: .6rem;
+                        margin-left: 1.1rem;
+                    }
+
+                }
+
+                .mark {
+
+                    color: $dark_grayish_blue;
+                    cursor: pointer;
+
+                    @include big_device {
+                        font-size: 1.6rem;
+                    }
+
+                    @include small_device {
+                        font-size: 1.4rem;
+                    }
+                }
+
+            }
+
+            &__list {
+
+                margin-top: 3.1rem;
+
+                .item {
+
+                    display: flex;
+                    border-radius: .8rem;
+
+                    @include big_device {
+                        padding: 1.7rem 2rem 1.8rem 2rem;
+                    }
+
+                    @include small_device {
+                        padding: 1.6rem;
+                    }
+
+
+
+                    &.unread {
+                        background-color: $very_light_grayish_blue;
+
+                        .notification__state {
+                            display: inline-block;
+                        }
+                    }
+
+                    &:not(:first-child) {
+                        margin-top: 0.8rem;
+                    }
+
+                    &__avt {
+
+                        @include big_device {
+                            width: 4.5rem;
+                            height: 4.5rem;
+                            flex: 0 0 4.5rem;
+                        }
+
+                        @include small_device {
+                            width: 3.9rem;
+                            height: 3.9rem;
+                            flex: 0 0 3.9rem;
+                        }
+
+                        img {
+
+                            @include img_cover;
+
+                        }
+                    }
+
+                    &__right {
+
+                        @include big_device {
+                            font-size: 1.6rem;
+                            line-height: 2rem;
+                            margin-left: 1.9rem;
+                        }
+
+                        @include small_device {
+                            font-size: 1.4rem;
+                            line-height: 1.764rem;
+                            margin-left: 1.3rem;
+                        }
+
+                        &:has(+ .item__pic) {
+                            margin-right: 1.6rem;
+                          }
+
+                        .notification {
+
+                            &__user {
+                                @include main_font_extrabold;
+                                color: $very_dark_blue;
+                                cursor: pointer;
+
+                                &:hover {
+                                    color: $blue;
+                                }
+                            }
+
+                            &__text {
+                                color: $dark_grayish_blue;
+                                margin-left: 0.7rem;
+                            }
+
+                            &__postTitle {
+                                @include main_font_extrabold;
+                                color: $dark_grayish_blue;
+                                margin-left: 0.7rem;
+                                cursor: pointer;
+
+                                &:hover {
+                                    color: $blue;
+                                }
+                            }
+
+                            &__groupTitle {
+                                @include main_font_extrabold;
+                                color: $blue;
+                                margin-left: 0.7rem;
+                                cursor: pointer;
+                            }
+
+                            &__state {
+                                width: 0.8rem;
+                                height: 0.8rem;
+                                border-radius: 50%;
+                                background-color: $red;
+                                display: none;
+                                margin-left: 0.6rem;
+                            }
+                        }
+
+                        .time {
+                            color: $grayish_blue;
+                            margin-top: 0.3rem;
+                        }
+
+                        .message {
+                            color: $dark_grayish_blue;
+                            padding: 1.7rem 2rem 2rem;
+                            border-radius: .5rem;
+                            border: 1px solid #dde7ee;
+                            background-color: #fff;
+                            margin-top: 1.3rem;
+                            cursor: pointer;
+                            transition: all .3s;
+
+                            &:hover {
+                                background-color: #E5EFFA;
+                            }
+                        }
+
+                    }
+
+                    &__pic {
+                        
+                        margin-left: auto;
+                        cursor: pointer;
+
+                        @include big_device {
+                            width: 4.5rem;
+                            height: 4.5rem;
+                            flex: 0 0 4.5rem;
+                        }
+
+                        @include small_device {
+                            width: 3.9rem;
+                            height: 3.9rem;
+                            flex: 0 0 3.9rem;
+                        }
+
+                        img {
+
+                            @include img_cover;
+
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
+}
